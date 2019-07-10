@@ -12,15 +12,15 @@ class Page(models.Model):
         return self.title
 
 class Slider(models.Model):
-    title = models.CharField(max_length=250)
-    desc = HTMLField()
+    title = models.CharField(max_length=250,null=True, blank=True)
+    desc = HTMLField(null=True, blank=True)
     image = models.ImageField()
 
     def __str__(self):
         return mark_safe('<img width="100" src="/media/%s" />' % self.image)
 
 class Gallery(models.Model):
-    title = models.CharField(max_length=250)
+    title = models.CharField(max_length=250, null=True, blank=True)
     image = models.ImageField()
     def __str__(self):
         return mark_safe('<img width="100" src="/media/%s" />' % self.image)
