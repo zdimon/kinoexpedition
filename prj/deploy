@@ -1,1 +1,2 @@
 gitc
+ssh webmaster@185.43.6.183 'cd kinoexpedition; git pull'
