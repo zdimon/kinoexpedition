@@ -8,6 +8,7 @@ class Page(models.Model):
     title = models.CharField(max_length=250)
     content = HTMLField()
     alias =  models.CharField(max_length=250)
+    video = models.FileField(null=True, blank=True)
     def __str__(self):
         return self.title
 
