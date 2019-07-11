@@ -29,7 +29,7 @@ class Gallery(models.Model):
     @property
     def get_small_img(self):
         url = get_thumbnailer(self.image).get_thumbnail({
-            'size': (150, 150),
+            'size': (231, 231),
             'box': self.cropping,
             'crop': True,
             'detail': True,
