@@ -108,7 +108,7 @@
 
 							{% for g in gallery  %}
 							<div class="item single-gallery">
-								<img src="{{ g.image.url  }}" height="130" alt="{{ g.title  }}">
+								<img src="{{ g.get_small_img  }}"  alt="{{ g.title  }}">
 							</div>	
 							{% endfor  %}																		
 						</div>

@@ -3,3 +3,5 @@ Pillow
 django-tinymce
 django-filebrowser
 django-grappelli
+django-image-cropping
+easy-thumbnails
