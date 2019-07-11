@@ -9,7 +9,7 @@ admin.site.register(Page, PageAdmin)
 
 
 class SliderAdmin(admin.ModelAdmin):
-    list_display = ['photo', 'order']
+    list_display = ['photo', 'title', 'order']
     list_editable = ('order',)
 
 admin.site.register(Slider, SliderAdmin)
