@@ -16,7 +16,10 @@ class Slider(models.Model):
     title = models.CharField(max_length=250,null=True, blank=True)
     desc = HTMLField(null=True, blank=True)
     image = models.ImageField()
-
+    order = models.IntegerField(default=0)
+    @property
+    def photo(self):
+        return mark_safe('<img width="100" src="/media/%s" />' % self.image)
     def __str__(self):
         return mark_safe('<img width="100" src="/media/%s" />' % self.image)
 
