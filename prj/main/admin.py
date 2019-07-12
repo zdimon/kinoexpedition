@@ -3,7 +3,7 @@ from .models import Page, Slider, Gallery
 from image_cropping import ImageCroppingMixin
 
 class PageAdmin(admin.ModelAdmin):
-    list_display = ['title', 'alias']
+    list_display = ['title', 'alias', 'order']
     list_editable = ('order',)
 
 admin.site.register(Page, PageAdmin)
