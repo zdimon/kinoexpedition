@@ -4,7 +4,7 @@ def home(req):
     slider = Slider.objects.all().order_by('order')
     #homepage = Page.objects.get(alias='home')
     #schedulepage = Page.objects.get(alias='schedule')
-    pages = Page.objects.all()
+    pages = Page.objects.all().order_by('order')
     gallery = Gallery.objects.all()
     cntx = {
         'slider': slider, 

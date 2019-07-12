@@ -4,6 +4,7 @@ from image_cropping import ImageCroppingMixin
 
 class PageAdmin(admin.ModelAdmin):
     list_display = ['title', 'alias']
+    list_editable = ('order',)
 
 admin.site.register(Page, PageAdmin)
 
