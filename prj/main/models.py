@@ -54,3 +54,5 @@ class Video(models.Model):
     image = models.ImageField()
     video = models.FileField()
     order = models.IntegerField(default=0)
+    def __str__(self):
+        return self.title
