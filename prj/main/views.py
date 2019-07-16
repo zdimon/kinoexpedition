@@ -11,7 +11,7 @@ def home(req):
         'slider': slider, 
         #'homepage': homepage,
         'pages': pages,
-        #'schedulepage': schedulepage,
+        'video': video,
         'gallery': gallery
         }
     return render(req,'index.html', cntx)
