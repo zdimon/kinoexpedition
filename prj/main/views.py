@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Slider, Page, Gallery
+from .models import Slider, Page, Gallery, Video
 def home(req):
     slider = Slider.objects.all().order_by('order')
     #homepage = Page.objects.get(alias='home')
