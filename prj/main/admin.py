@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Page, Slider, Gallery
+from .models import Page, Slider, Gallery, Video
 from image_cropping import ImageCroppingMixin
 
 class PageAdmin(admin.ModelAdmin):
@@ -19,3 +19,8 @@ class GalleryAdmin(ImageCroppingMixin, admin.ModelAdmin):
     pass
 
 admin.site.register(Gallery, GalleryAdmin)
+
+class VideoAdmin(ImageCroppingMixin, admin.ModelAdmin):
+    pass
+
+admin.site.register(Video, VideoAdmin)

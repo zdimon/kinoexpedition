@@ -48,3 +48,9 @@ class Gallery(models.Model):
             'detail': True,
         }).url
         return mark_safe('<img width="100" src="%s" />' % thumbnail_url)
+
+class Video(models.Model):
+    title = models.CharField(max_length=250, null=True, blank=True)
+    image = models.ImageField()
+    video = models.FileField()
+    order = models.IntegerField(default=0)
